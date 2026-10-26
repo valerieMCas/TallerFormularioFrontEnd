@@ -1,0 +1,111 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+  background: #0b2545;
+  color: #1f2328;
+}
+
+form {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+label,
+legend {
+  display: block;
+  font-weight: 600;
+  margin-top: 0.75rem;
+  color: #0b2545;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #8c959f;
+  border-radius: 4px;
+}
+
+input:focus,
+select:focus {
+  border-color: #0b2545;
+}
+
+/* Casilla de términos en la misma línea que su texto */
+input[type="checkbox"] {
+  width: auto;
+  margin: 1rem 0.4rem 0 0;
+  vertical-align: middle;
+}
+
+input[type="checkbox"] + label {
+  display: inline;
+  font-weight: normal;
+}
+
+/* Campo con error (nivel 4) */
+[aria-invalid="true"] {
+  border: 2px solid #c0392b;
+}
+
+.error {
+  color: #c0392b;
+  min-height: 1.2em;
+  margin: 0.25rem 0 0;
+}
+
+/* Teléfonos */
+fieldset {
+  margin-top: 0.75rem;
+  border: 1px solid #d0d7de;
+  border-radius: 4px;
+}
+
+.fila-telefono {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem;
+}
+
+.fila-telefono label,
+.fila-telefono .error {
+  grid-column: 1 / -1;
+}
+
+/* Botones */
+button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background: #0b2545;
+  color: #fff;
+  border: none;
+}
+
+button[type="submit"]:hover {
+  background: #13315c;
+}
+
+button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+/* Foco visible para navegar con teclado (nivel 5) */
+:focus-visible {
+  outline: 3px solid #f5a623;
+  outline-offset: 2px;
+}
